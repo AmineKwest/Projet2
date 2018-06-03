@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% block title %}
+    <title>Wild Code School QUIZZ !!</title>
+{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" href="/assets/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+{% endblock %}
+  </head>
+
+  <header>
+{% block header %}
+    <header>
+      <div class="navbar-header">
+        <div class="toggle-button" id="toggle">
+          <span class="bar top"></span>
+          <span class="bar middle"></span>
+          <span class="bar bottom"></span>
+        </div>
+      </div>
+      <nav class="overlay" id="overlay">
+        <ul>
+          <li>
+            <div class="svg">
+              <img src="/assets/images/Forme 2.svg" class="logoMenu">
+            </div>
+          </li>
+          <li>
+            <a href="/">Accueil</a>
+          </li>
+        </br>
+          {# <li>
+            <a href="#">Contact</a>
+          </li> #}
+      {# </br> #}
+{% if connected == FALSE %}
+          <li>
+            <a href="/connexion">Connexion</a>
+          </li>
+        </br>
+      {# <li>
+        <a href="#">
+          <form class="connexion" name="Formulaire" method="POST" action="" novalidate>
+            <label for="email"> </label>
+            <input class="form-control" type="text" id="email" name="email" placeholder="E-mail" required></a>
+      </li> #}
+     {#  <li>
+        <a href="#">
+            <label for="password"> </label>
+            <input class="form-control" type="text"  id="password" name="password" placeholder="Password" required></a></form>
+      </li> #}
+      {# <li><a href="#" class="myButtonValider">Valider</a></li> #}
+      {# </br> #}
+          <li>
+            <a href="/formulaire">Inscription</a>
+          </li>
+{% endif %}
+{% if connected == TRUE %}
+          <li>
+            <a href="/profil">Profil</a>
+          </li>
+          <li>
+            <form method="POST" action="/disconnect">
+              <input class="myButtonValider" type="submit" value="Disconnect" name="disconnect">
+            </form>
+          </li>
+{% endif %}
+        </ul>
+      </nav>
+
+      <div class="navbar">
+        <div class="Contact">
+          <div class="toggle2-button" id="toggle2">
+            <img src="/assets/images/phone_circle_white.svg" class="telephone">
+          </div>
+        </div>
+      </div>
+
+      <nav class="overlay2" id="overlay2">
+        <ul>
+          <li>
+            06 66 96 17 77</br>68, Cours de Verdun </br> 33000 BORDEAUX
+          </li>
+          </br>
+          <li>
+            Contact
+          </li>
+          <li>
+            <form class="contact_us" name="FormulaireContact" method="POST" action="">
+              <label for="email"> </label>
+              <input class="form-control" type="text" id="email" name="email" placeholder="E-mail" required>
+              <li></br>
+                <textarea class="textarea" name="textarea" placeholder="Message" rows="2" cols="15"></textarea>
+              </li>
+            </form>
+          <li>
+            <a href="#" class="myButtonValider">Valider</a>
+          </li>
+          </br>
+        </ul>
+      </nav>
+    </header>
+
+{% endblock %}
+
+  </header>
+
+  <body>
+{% block content %}
+{% endblock %}
+{% block javascript %}
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
+  </script>
+
+  <script src="//code.jquery.com/jquery-1.11.1.min.js">
+  </script>
+
+  <script type="text/javascript">
+      $(function()
+      {
+        $('a[href*=#]').on('click', function(e)
+        {
+          e.preventDefault();
+          $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+        });
+      });
+  </script>
+
+  <script type="text/javascript">
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js">
+  </script>
+
+  <script src="overlay.js">
+  </script>
+
+  <script type="text/javascript">
+    $('#toggle').click(function()
+    {
+      $(this).toggleClass('toggle-active');
+      $('#overlay').toggleClass('nav-active');
+    });
+
+    $('#toggle2').click(function()
+    {
+      $(this).toggleClass('toggle2-active');
+      $('#overlay2').toggleClass('nav-active');
+    });
+  </script>
+
+  <script type="text/javascript">
+  var score = $(".score").text();
+  $(".fill").css("height",score);
+  </script>
+
+  <script>
+  function myFunction(elmnt,clr) {
+      elmnt.style.background = clr;
+
+  }
+  </script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+{% endblock %}
+  </body>
+</html>

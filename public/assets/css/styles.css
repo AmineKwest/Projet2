@@ -1,0 +1,599 @@
+body {
+  margin:0;
+  padding:0;
+  background: url("/assets/images/image-background2.png") no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+  font-family: 'Architects Daughter', cursive;}
+
+}
+/* body{
+   background-image: url("/assets/images/image-background2.png");
+   background-repeat: no-repeat;
+   background-attachment: fixed; */
+.wild{
+  display: flex;
+  justify-content: center;
+}
+.wildcodeschool{
+  display: flex;
+  justify-content: center;
+}
+h1 h2 h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: white;
+}
+li{
+  list-style-type: none;
+}
+header{
+  margin-bottom: 5%;
+}
+footer{
+  line-height: 0px;
+  vertical-align: middle;
+  width: 100%;
+  position:absolute;
+  bottom:0px;
+}
+textarea{
+  color: black;
+  font-size: 15px;
+  border-radius: 3px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.logoMenu{
+  height: 20%;
+  width: 20%;
+  margin-bottom: 5%;
+}
+.logoscore{
+  height: 20%;
+  width: 20%;
+}
+.profile-img {
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+.panel-body{
+  background-color: none;
+}
+.jumbotron{
+  background-color: none;
+}
+select{
+  margin-top: 25px;
+}
+
+/****************************** HEADER ****************************************/
+/****************************** MENU ****************************************/
+.toggle-button {
+  position: fixed;
+  top: 8px;
+  left: 15px;
+  padding: 9px 10px;
+  margin: 8px 15px 8px 0;
+  height: 20px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 5;
+}
+.bar {
+  background-color: white;
+  display: block;
+  width: 30px;
+  height: 5px;
+  border: 0;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+.bar + .bar {
+  margin-top: 4px;
+}
+.middle {
+  top: 11px;
+}
+.bottom {
+  top: 22px;
+}
+.toggle-button:hover {
+  opacity: .7;
+}
+.toggle-active .bar {
+  background-color: #fff;
+}
+.toggle-active .top {
+  -webkit-transform: translateY(6px) translateX(0) rotate(45deg);
+}
+.toggle-active .middle {
+  opacity: 0;
+}
+.toggle-active .bottom {
+  -webkit-transform: translateY(-12px) translateX(0) rotate(-45deg);
+}
+.overlay {
+  position: fixed;
+  background-image: linear-gradient(120deg, #ffa644 0%, #ffa644 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 2s, visibility 2s, height 2s;
+}
+.nav-active {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  z-index: 4;
+
+  /*    max-height: 340px;*/
+}
+.overlay ul {
+  display: block;
+  position: relative;
+  top: 150px;
+  left: 0;
+  font-family: serif;
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+.overlay ul li {
+  display: block;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.overlay ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.overlay a:hover{
+  border-bottom:2px solid white;
+}
+/******************************************************************************/
+.toggle2-button {
+  top: 8px;
+  left: 15px;
+  padding: 9px 10px;
+  margin: 8px 15px 8px 15px;
+  cursor: pointer;
+  display: block;
+  visibility: visible;
+  z-index: 5;
+  float: right;
+}
+.telephone{
+  display: block;
+  position: static;
+  background-color: none;
+  width: 40px;
+  height: 40px;
+  border: 0;
+}
+.overlay2 {
+  background-image: linear-gradient(120deg, #23a377 0%, #23a377 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 2s, visibility 2s, height 2s;
+
+
+}
+.nav-active {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  /*    max-height: 340px;*/
+}
+.overlay2 ul{
+  display: block;
+  position: relative;
+  font-family: serif;
+  font-size: 35px;
+  font-weight: 100;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+.overlay2 ul li form{
+  display: block;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.overlay2 ul li {
+  color: #fff;
+  text-decoration: none;
+}
+.form-control{
+  font-size: 20px;
+}
+.textarea{
+  font-size: 20px;
+}
+
+/********************APPRENDS À CODER SANS CHAUSSURES *************************/
+.slogant{
+  text-align: center;
+  color: black;
+  text-shadow: 11px 14px 30px rgba(0, 0, 0, 1);
+  margin-left: 2px;
+  margin-right: 2px;
+}
+/***************************** BOUTTON ****************************************/
+.myButton {
+  background-color:#1abc9c;
+  border-radius:8px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:20px;
+  padding:15px 15px;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-decoration:none;
+}
+.myButton:hover {
+  background-color:#1abc9c;
+  border-color: #1abc9c;
+  text-decoration: none;
+  color: black;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.myButtonValider {
+  background-color:#1abc9c;
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  border-radius:8px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:20px;
+  font-weight:bold;
+  padding:10px 20px;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 10px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+}
+.myButtonValider:hover {
+  background-color:orange;
+}
+.myButtonValider:active {
+  position:relative;
+  top:1px;
+}
+/******************************** WHERE ?**************************************/
+.where{
+  text-align:center;
+  color: black;
+  text-shadow: 11px 14px 30px rgba(0, 0, 0, 1);
+  padding-top: 5%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/******************************** GALERIE**************************************/
+figure {
+  position:relative;
+  width:100%;
+  min-height:160px;
+  display:block;
+  float:left;
+  overflow:hidden;
+  margin:10px 0;
+  box-shadow:inset 0px 2px 3px rgba(0,0,0,.2);
+  -webkit-transition: all .15s ease-in-out;
+}
+.Bordeaux {
+  background-color:#000;
+  background-image: url("https://lh6.googleusercontent.com/-osfKGwyNlrg/VZZH5UZNg2I/AAAAAAAAALU/bFjCmIq0drU/w506-h750/Bordeaux%2BM%25C3%25A9tropole.jpg");
+  background-size:cover;
+  background-position:center center;
+}
+.Paris {
+  background-color:#000;
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/0d/f5/7c/f2/eiffel-tower-priority.jpg");
+  background-size:cover;
+  background-position:center center;
+}
+.Lyon {
+  background-color:#000;
+  background-image: url("https://www.les-crises.fr/wp-content/uploads/2017/10/lyon-quizz.jpg");
+  background-size:cover;
+  background-position:center center;
+}
+.Lille {
+  background-color:#000;
+  background-image: url("https://www.lonelyplanet.fr/sites/lonelyplanet/files/styles/manual_crop/public/media/destination/slider/mobile/lille2.jpg?itok=WEyiM_YJ");
+  background-size:cover;
+  background-position:center center;
+}
+.Strasbourg {
+  background-color:#000;
+  background-image: url("https://yourhosthelper.com/wp-content/uploads/2017/12/strasbourg-2.jpg");
+  background-size:cover;
+  background-position:center center;
+}
+.LaLoupe {
+  background-color:#000;
+  background-image: url("https://wildcodeschool.fr/wp-content/uploads/2017/01/wild-code-school-la-loupe-open-space-lo-angle-shot.jpg");
+  background-size:cover;
+  background-position:center center;
+}
+.Toulouse {
+  background-color:#000;
+  background-image: url("http://admin.traxmag.com//uploads/images/croped600x1200/2016/09/Toulouse_Capitole_Night_Wikimedia_Commons_57dc1439447ea.jpg");
+  background-size:cover;
+  background-position:center center;
+}
+.Orleans {
+  background-color:#000;
+  background-image: url("https://www.yespark.fr/blog/wp-content/uploads/2017/03/stationnement-orleans.jpg");
+  background-size:cover;
+  background-position:center center;
+}
+.Biarritz {
+  background-color:#000;
+  background-image: url("https://images.sudouest.fr/2017/11/08/5a026d0c66a4bd4574493e00/widescreen/1000x500/les-nageurs-s-etaient-retrouves-en-difficulte-au-large-de-la-grande-plage-de-biarritz-le-26-octobre-dernier.jpg?v1");
+  background-size:cover;
+  background-position:center center;
+}
+.Reims {
+  background-color:#000;
+  background-image: url("http://www.hamonic-masson.com/IMG/jpg/hamonic_masson_reims_vue_colbert_tif_update_1.jpg");
+  background-size:cover;
+  background-position:center center;
+}
+
+figcaption {
+  display:block;
+  float:left;
+  position:absolute;
+  top:0;
+  left:0;
+  color:#FFF;
+  font-size:15px;
+  line-height:20px;
+  font-weight:bold;
+  text-transform:uppercase;
+  background-color:rgba(0,0,0,.7);
+  width:55%;
+  height:100%;
+  margin:0 0 0 -20px;;
+  padding:20px;
+  padding-left:40px;
+  -webkit-transform: skew(-10deg);
+  -moz-transform: skew(-10deg);
+  -o-transform: skew(-10deg);
+  -webkit-transition: all .15s ease-in-out;
+}
+figcaption a, figcaption a:hover {
+  color:#FFF;
+  text-decoration:none;
+}
+figcaption strong {
+  display:block;
+  word-wrap: normal;
+  -webkit-transform: skew(10deg);
+  -moz-transform: skew(10deg);
+  -o-transform: skew(10deg);
+}
+figcaption strong:before {
+  content:" ";
+  border-top:solid 3px white;
+  width:140%;
+  display:block;
+  clear:both;
+  margin-bottom:20px;
+  -webkit-transition: all .15s ease-in-out;
+}
+figure:hover figcaption {
+  background-color: black;
+  -webkit-transition: all .15s ease-in-out;
+}
+figure:hover figcaption strong:before {
+  width:200%;
+  border-color:#FFF;
+  -webkit-transition: all .15s ease-in-out;
+}
+
+/**************************** ICON SCROLL**************************************/
+.demo a {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+}
+.demo a:hover {
+  opacity: .5;
+}
+#section03 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#section03 a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+#section03 a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 3s infinite;
+  animation: sdb03 3s infinite;
+  box-sizing: border-box;
+}
+@keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*************************************QUIZZ************************************/
+.btn-primary{
+  color: black;
+  background-color: white;
+  border-color: black;
+  margin-top: 5px;
+  margin-top: 5px;
+}
+.btn::selection {
+  background-color: #1abc9c;
+}
+label.btn:hover {
+  background-color: #1abc9c;
+  border-color: white;
+  text-shadow: 0 3px 2px rgba(0,0,0,0.4);
+  -webkit-transform: scale(1.0);
+  -moz-transform: scale(1.0);
+  -o-transform: scale(1.0)
+}
+.modal-body{
+  padding: 0px;
+  margin-bottom: 0px;
+}
+.QuizzName{
+  text-align: center;
+  color: white;
+}
+.hvr {
+	background-color: #1abc9c;
+}
+
+/**************************************SCORE**********************************/
+.titreResultat{
+  text-align: center;
+}
+.result{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.circle{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #bdc3c7;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.fill{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  background: #1abc9c;
+}
+
+.score{
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  text-align: center;
+  font-family: Arial, sans serif;
+  color: #fff;
+  font-size: 40pt;
+  line-height: 0;
+  font-weight: normal;
+}
+/************************************FOOTER***********************************/
+.bigpixi-footer-social{
+  float: right;
+  position: fixed;
+  width: 100%; height: 50px;
+  bottom: 0; left: 0; right:
+}
+.bigpixi-footer-social__list-item {
+  display: inline-block;
+
+}
+.bigpixi-footer__icon-link {
+  display: inline-block;
+  -webkit-transition: 0.1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 0.1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+}
+.bigpixi-footer-social__icon {
+  height: 30px;
+  width: 30px;
+}
+.bigpixi-footer-social__icon:hover {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 2px solid #e2e2e2;
+  padding: 4px;
+  transition : .1s;
+}

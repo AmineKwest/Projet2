@@ -1,0 +1,11 @@
+.idea
+/vendor/
+/temp/*
+*.cache
+composer.json
+composer.lock
+src/.DS_Store
+src/Model/.DS_Store
+.gitignore.swp
+.DS_Store
+app/db.php

@@ -1,0 +1,26 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+<section class="QuizzName">
+  <h2> Quizz ! </h2>
+</section>
+<form method="post" action="/quizz">
+  <div class="container-fluid ">
+    <div class="modal-header">
+      <h3>{{ question }}</h3>
+    </div>
+{% for answer in answers %}
+    <div class="modal-body">
+      <div class="col-xs-6 ">
+        <div class="quiz" id="quiz" data-toggle="buttons">
+          <label onclick="myFunction(this, '#1abc9c')" class="btn btn-lg btn-primary btn-block">
+            <input class="form-check-input" type="radio" name="isTrue"
+            value="{{ answer.isTrue }}">{{ answer.name }}</label>
+        </div>
+      </div>
+    </div>
+{% endfor %}
+
+</div>
+<button type="submit" name="submit" value="submit" class="myButton"> Valider </button>
+</form>
+{% endblock %}

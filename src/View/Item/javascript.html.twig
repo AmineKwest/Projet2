@@ -1,0 +1,27 @@
+{% extends 'layout.html.twig' %}
+{% block javascript %}
+<script type="text/javascript">
+$(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
+</script>
+<script type="text/javascript">
+</script>
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="overlay.js"></script>
+<!-- /Scripts -->
+<script type="text/javascript">
+$('#toggle').click(function() {
+  $(this).toggleClass('toggle-active');
+  $('#overlay').toggleClass('nav-active');
+});
+$('#toggle2').click(function() {
+  $(this).toggleClass('toggle2-active');
+  $('#overlay2').toggleClass('nav-active');
+});
+</script>
+{% endblock %}

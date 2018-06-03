@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+    <h2 class="titreResultat"> Resultat: </h2>
+    <section class="result">
+      <div class="circle">
+      <div class="fill">
+      </div>
+      <h3 class="score">{{ score }}0%</h3>
+    </div>
+    </section>
+    <section class="button">
+      <a href="/choice" class="myButton">Rejouer a un Quizz</a>
+      {% if connected == TRUE %}
+          <section class="button">
+            <a href="/editQuizz" class="myButton">Créér son propre Quizz</a>
+            <a href="/profil" class="myButton">Mon profil</a>
+          </section>
+      {% endif %}
+    </section>
+  </br>
+{% endblock %}

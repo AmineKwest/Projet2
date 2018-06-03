@@ -1,0 +1,55 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+<h1>Entré vos questions et reponses</h1>
+<form method="post" action="">
+  <div class=container>
+    <p>
+      <label for="chosenTheme">Sélectionner un Thème</label><br />
+      <select name="chosenTheme" id="chosenTheme">
+      {% for info in themes %}
+      <option value="{{ info.theme }}">{{ info.theme }}</option>
+    {% endfor %}
+  </select>
+</p>
+</div>
+
+
+<section class="content">
+  <label for="quizzName">Nom du Quizz</label>
+  <textarea class="form-control" id="quizzName" rows="1" placeholder="Entrez ici le nom de votre quizz" name="quizzName"></textarea>
+
+</section>
+<br><br>
+
+{% for question in 1..10 %}
+
+
+<div class="form-group">
+  <label for="question">Question {{ question }}</label>
+  <textarea class="form-control" rows="1" id="question" placeholder="Entrez ici votre question" name="{{ question }}"></textarea>
+</div>
+
+
+{% for answer in 'A'..'D' %}
+
+
+<div class="modal-body">
+  <div class="col-xs-6 ">
+    <div class="quiz" id="quiz" data-toggle="buttons">
+      <label for="answer">Réponse {{ answer }} </label>
+      <textarea class="form-control" id="answer" rows="1" placeholder="entrez ici votre réponse" name="{{ question ~ answer }}"></textarea>
+    </div>
+  </div>
+</div>
+<br><br><br><br>
+{% endfor %}
+<br><br><br><br>
+{% endfor %}
+<br><br>
+
+<button type="submit" class="myButton" name="submit" value="validé"> Valider </button>
+</form>
+
+{% endblock %}
